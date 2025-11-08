@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: emailjs-webhook
+    runtime: python
+    buildCommand: pip install -r requirements_webhook.txt
+    startCommand: python email_webhook.py
+    plan: free
+    healthCheckPath: /health
+
